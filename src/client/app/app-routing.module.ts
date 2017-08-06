@@ -5,11 +5,12 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'contacts',
+    children: [],
+          redirectTo: 'contacts',
     pathMatch: 'full'
-    //children: []
-  },{
-    path:'contacts',
+  },
+  {
+    path: 'contacts',
     component: ContactListComponent
   }
 ];

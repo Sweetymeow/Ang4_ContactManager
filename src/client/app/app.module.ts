@@ -5,22 +5,22 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactListComponent } from './contact-list/contact-list.component';
 import { MenuComponent } from './menu/menu.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactListComponent,
     MenuComponent,
+    ContactListComponent,
     ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpModule
+      FormsModule,
+      HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

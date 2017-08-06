@@ -1,16 +1,16 @@
 {
-  "name": "ag4-contact-manager",
+  "name": "ang4-conmanager",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "build": "ng build --prod",
     "start": "run-s build start:server",
     "start:server": "node src/server/index.js",
     "watch:client": "ng serve --proxy-config proxy.conf.json --open",
     "watch:server": "nodemon src/server/index.js",
     "watch": "run-p watch:*",
     "sample": "node src/server/data/seed-db.js",
-    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -33,14 +33,16 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "express-jwt": "^5.3.0",
-    "jsonwebtoken": "^7.4.2",
-    "mongodb": "^2.2.30",
+    "jsonwebtoken": "^7.4.1",
+    "mongodb": "^2.2.26",
     "npm-run-all": "^4.0.2",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "^1.2.7",
+    "@angular/cli": "1.2.7",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/language-service": "^4.0.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",

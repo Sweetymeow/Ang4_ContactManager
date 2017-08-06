@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ag4-contact-manager"
+    "name": "ang4-conmanager"
   },
   "apps": [
     {
@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.sass"
+        "styles.sass",
+        "assets/semantic.min.css",
+        "assets/semantic.grid.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

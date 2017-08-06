@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Contact } from '../shared/contact.model';
-import 'rxjs/add/operator/map'; //  parse the response of http request
 
 @Component({
   selector: 'app-contact-list',
@@ -9,14 +6,10 @@ import 'rxjs/add/operator/map'; //  parse the response of http request
   styleUrls: ['./contact-list.component.sass']
 })
 export class ContactListComponent implements OnInit {
-  contacts: Contact[];
 
-  constructor(public http: Http) { } //  public
+  constructor() { }
 
   ngOnInit() {
-    this.http.get('/api/contacts')
-      .map( (res: Response) => res.json() )
-      .subscribe(data => this.contacts = data );
   }
 
 }
