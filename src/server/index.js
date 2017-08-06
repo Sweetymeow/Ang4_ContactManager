@@ -2,13 +2,16 @@ const express = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
+const path = require('path');
 
 // reads the environment variables from the .env file
 require('dotenv').config(); // then call the config method on it
 
-app.use(bodyParser.json()); // make the data available in the body of the request in our handlers.
-
 let database
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/profiles', express.static(path.join(__dirname, 'profiles')));
+app.use(bodyParser.json()); // make the data available in the body of the request in our handlers.
 
 app.get('/api/contacts', (req, res) => {
   const contactsCollection = database.collection('contacts');
@@ -33,6 +36,10 @@ app.post('/api/contacts', (req, res) => {
     return res.status(201).json(newRecord);
   })
 })
+
+app.get('*', (req, res) => {
+  return res.sendFile(path.join(__dirname, 'public/index.html'))
+});
 
 // connect to MongoDB database
 MongoClient.connect(process.env.DB_CONN, (err, db) => {
