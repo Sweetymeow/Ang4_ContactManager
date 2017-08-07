@@ -1,0 +1,8 @@
+@import '../../assets/site.variables.scss';
+
+div.container {
+  margin: 2rem auto;
+  form{
+    width: $pageMinWidth;
+  }
+}

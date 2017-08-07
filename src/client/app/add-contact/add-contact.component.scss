@@ -1,0 +1,9 @@
+@import '../../assets/site.variables.scss';
+
+div.add-form-container{
+  padding: 1rem;
+  form{
+    width: $formMaxWidth;
+    margin: 1rem auto;
+  }
+}

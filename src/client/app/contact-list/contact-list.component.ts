@@ -6,12 +6,12 @@ import { Contact } from '../shared/contact.model';
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.sass']
+  styleUrls: ['./contact-list.component.scss']
 })
 
 export class ContactListComponent implements OnInit {
     contacts: Contact[];
-    
+
     constructor(public http: Http) { }
 
     ngOnInit() {
