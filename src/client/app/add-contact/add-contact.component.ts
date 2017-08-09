@@ -21,6 +21,7 @@ export class AddContactComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.loading = true;
+    console.log(form.value);
     // Make hard copy of form values
     const formValues = Object.assign({}, form.value);
 

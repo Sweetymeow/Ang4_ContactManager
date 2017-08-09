@@ -9,7 +9,7 @@
     <p>Name: {{newContact.name}}</p>
   </div>
   <form action="" class="ui form big" #contactForm="ngForm"
-    (submit)="onSubmit(contactForm)" [class.loading]="loading">
+    (ngSubmit)="onSubmit(contactForm)" [class.loading]="loading">
     <h4 class="ui dividing header">Contact Information</h4>
     <div class="fields">
       <div class="eight wide field">
@@ -43,6 +43,6 @@
       <label>Phone URL</label>
       <input type="text" placeholder="http://cdn.com/profile.jpg" name="photo" ngModel>
     </div>
-    <div class="ui button submit large grey button right floated" type="submit" ngModel>Submit</div>
+    <div class="ui button submit large grey button right floated" type="submit">Submit</div>
   </form>
 </div>
